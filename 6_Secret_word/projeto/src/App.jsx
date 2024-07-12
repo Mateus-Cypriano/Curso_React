@@ -1,13 +1,16 @@
 // CSS
 import './App.css'
+
+//componentes
 import StartScreen from './components/StartScreen'
+import Game from './components/Game';
+import GameOver from './components/GameOver';
+
 // React
 import {useCallback, useEffect, useState} from "react";
 
 // data
 import {wordsList} from './data/words';
-import Game from './components/Game';
-import GameOver from './components/GameOver';
 
 const stages = [
   {id: 1, name: 'start'},
@@ -16,6 +19,7 @@ const stages = [
 ];
 
 const guessesQty = 3;
+const myScore = 0;
 
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name);
@@ -27,7 +31,7 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
   const [guesses, setGuesses] = useState(guessesQty);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(myScore);
 
   const pickWordAndCategory = useCallback(() => {
     // escolhe uma categoria aleatoria
@@ -61,6 +65,7 @@ function App() {
 
     setGameStage(stages[1].name);
   }, [pickWordAndCategory]);
+  
 
   // processa a letra do input
   const verifyLetter = (letter) => {
@@ -115,7 +120,7 @@ function App() {
     //win condition
     if(guessedLetters.length === uniqueLetters.length) {
       //add score
-      setScore((actualScore) => actualScore += 100);
+      setScore((actualScore) => (actualScore += 100));
 
       // reinicia o jogo com uma nova palavra
       startGame();

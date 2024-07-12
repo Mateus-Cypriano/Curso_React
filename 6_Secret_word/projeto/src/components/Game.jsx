@@ -27,7 +27,7 @@ const Game = ({verifyLetter,
   return (
     <div className="game">
         <p className="points">
-          <span>Pontuação: {score}</span>
+          <span>Pontuação</span>:{score}
         </p>
         <h1>Advinhe a palavra:</h1>
         <h3 className="tip">

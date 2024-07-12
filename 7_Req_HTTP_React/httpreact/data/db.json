@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": "5e40",
+      "name": "bota",
+      "price": "40"
+    },
+    {
+      "id": "0724",
+      "name": "MOUSE",
+      "price": "60"
+    },
+    {
+      "id": "4e70",
+      "name": "monitor",
+      "price": "499.99"
+    },
+    {
+      "id": "0e21",
+      "name": "Gabinete branco",
+      "price": "115.89"
+    },
+    {
+      "id": "59c4",
+      "name": "Microfone condensador",
+      "price": "80"
+    },
+    {
+      "id": "9e1a",
+      "name": "cabo hdmi 6m",
+      "price": "14"
+    }
+  ]
+}
